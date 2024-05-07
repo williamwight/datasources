@@ -494,11 +494,11 @@ The following table describes the retrieve all jobs response parameters:
 | `jobs` | container | The jobs retrieved in the search. Contains the `Filename`, `The number of rows successfully processed`, `Job ID`, `Status of the job`, `Date the job was created`, `Date the job began processing`, and `Date the job finished processing` parameters. |
 | `Filename` | string | The filename of the file ingested by the Data Sources job |
 | `The number of rows successfully processed` | integer | The number of rows successfully processed by the Data Sources job |
-| `Job ID` | integer | The Data Source job ID |
-| `Status of the job` | string | The status of the Data Source job |
-| `Date the job was created` | string | The date the Data Source job was created |
-| `Date the job began processing` | string | The date the Data Source job began processing |
-| `Date the job finished processing` | string | The date the Data Source job finished processing |
+| `Job ID` | integer | The data source job ID |
+| `Status of the job` | string | The status of the data source job |
+| `Date the job was created` | string | The date the data source job was created |
+| `Date the job began processing` | string | The date the data source job began processing |
+| `Date the job finished processing` | string | The date the data source job finished processing |
 | `total_pages` | integer | The total number of pages returned by the search |
 
 ## GET retrieve a single job
@@ -548,7 +548,7 @@ The following table describes the retrieve a single job request parameters:
 | Name | Required | Type | Description |
 | --- | --- | --- | --- |
 | `report_suite_id` | required | string | The report suite ID associated with the Data Sources account |
-| `data_source_id` | required | string | The Data Source ID associated with the job |
+| `data_source_id` | required | string | The data source ID associated with the job |
 | `job_id` | required | string | The job ID of the job to retrieve |
 
 ### Response Parameters
@@ -559,11 +559,11 @@ The following table describes the retrieve a single job response parameters:
 | --- | --- | --- |
 | `Filename` | string | The filename of the file ingested by the Data Sources job |
 | `The number of rows successfully processed` | integer | The number of rows successfully processed by the Data Sources job |
-| `Job ID` | integer | The Data Source job ID |
-| `Status of the job` | string | The status of the Data Source job |
-| `Date the job was created` | string | The date the Data Source job was created |
-| `Date the job began processing` | string | The date the Data Source job began processing |
-| `Date the job finished processing` | string | The date the Data Source job finished processing |
+| `Job ID` | integer | The data source job ID |
+| `Status of the job` | string | The status of the data source job |
+| `Date the job was created` | string | The date the data source job was created |
+| `Date the job began processing` | string | The date the data source job began processing |
+| `Date the job finished processing` | string | The date the data source job finished processing |
 
 For more information, or for trouble-shooting help, see the following:
 
