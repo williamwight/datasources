@@ -565,6 +565,19 @@ The following table describes the retrieve a single job response parameters:
 | `Date the job began processing` | string | The date the data source job began processing |
 | `Date the job finished processing` | string | The date the data source job finished processing |
 
+## Status codes
+
+Each API request returns an HTTP status code that reflects the result, as follows:
+
+| HTTP code | Meaning | Description |
+| --- | --- | --- |
+| 200 | Success | The request is successful. |
+| 400 | Bad Request | The request was improperly constructed, missing key information, and/or contained incorrect syntax. This error code could indicate a problem such as a missing required parameter or the supplied data did not pass validation. |
+| 401 | Authentication failed | The request did not pass an authentication check. Your access token may be missing or invalid. Similarly, you may have attempted to access an object that requires administrator permissions. See the OAuth token errors section below for more details. |
+| 403 | Forbidden | The resource was found, but you do not have the right credentials to view it. You might not have the required permissions to access or edit the resource for reasons not applicable to status code 401. |
+| 404 | Not found | The requested resource could not be found on the server. The resource may have been deleted, or the requested path was entered incorrectly. |
+| 500 | Internal server errors | This is a server-side error. If you are making many simultaneous calls, you may be reaching the API limit and need to filter your results. Wait for a moment before trying your request again, and contact your administrator if the problem persists. |
+
 For more information, or for trouble-shooting help, see the following:
 
 * [Data sources overview](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/overview).
