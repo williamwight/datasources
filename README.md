@@ -34,7 +34,7 @@ Adobe may add optional request and response members (name/value pairs) to existi
 
 Use this endpoint to retrieve all Data Sources accounts for a given report suite ID. For more information regarding Data Sources accounts, see the [Getting started with data sources](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/getting-started) guide.
 
-`GET https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/data_sources/account/{REPORT_SUITE_ID}`
+`GET https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/datasources/account/{REPORT_SUITE_ID}`
 
 ### Request and Response Examples
 
@@ -114,7 +114,7 @@ The following table describes the retrieve Data Sources accounts response parame
 
 Use this endpoint to retrieve information about a single Data Sources account. For more information regarding Data Sources accounts, see the [Getting started with data sources](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/getting-started) guide.
 
-`GET https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/data_sources/account/{REPORT_SUITE_ID}/{DATA_SOURCE_ID}`
+`GET https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/datasources/account/{REPORT_SUITE_ID}/{DATA_SOURCE_ID}`
 
 ### Request and Response Examples
 
@@ -185,7 +185,7 @@ The following table describes the retrieve a single Data Sources account respons
 
 Use this endpoint to creata a Data Sources account. For more information regarding Data Sources accounts, see the [Getting started with data sources](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/getting-started) guide.
 
-`PUT https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/data_sources/account/{REPORT_SUITE_ID}`
+`PUT https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/datasources/account/{REPORT_SUITE_ID}`
 
 ### Request and Response Examples
 
@@ -263,7 +263,7 @@ The following table describes the create a Data Sources account response paramet
 
 Use this endpoint to delete a Data Sources account. This action cannot be undone. For more information regarding Data Sources accounts, see the [Getting started with data sources](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/getting-started) guide.
 
-`DELETE https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/data_sources/account/{REPORT_SUITE_ID}/{DATA_SOURCE_ID}`
+`DELETE https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/datasources/account/{REPORT_SUITE_ID}/{DATA_SOURCE_ID}`
 
 ### Request and Response Examples
 
@@ -320,7 +320,7 @@ The following table describes the DELETE Data Sources account response parameter
 
 Use this endpoint to upload a data file to a Data Sources account. Data files must be uploaded in the methods described in the [Upload data sources file to Adobe](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/file-upload) guide.
 
-`PUT https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/job/{REPORT_SUITE_ID}/{DATA_SOURCE_ID}`
+`PUT https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/datasources/job/{REPORT_SUITE_ID}/{DATA_SOURCE_ID}`
 
 ### Request and Response Examples
 
@@ -420,7 +420,7 @@ The following table describes the upload data response parameters:
 
 Use this endpoint to retrieve all jobs associated with a Data Sources account.
 
-`GET https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/job/{REPORT_SUITE_ID}/{DATA_SOURCE_ID}`
+`GET https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/datasources/job/{REPORT_SUITE_ID}/{DATA_SOURCE_ID}`
 
 ### Request and Response Examples
 
@@ -505,7 +505,7 @@ The following table describes the retrieve all jobs response parameters:
 
 Use this endpoint to retrieve information regarding a single job by its job ID.
 
-`GET https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/job/{REPORT_SUITE_ID}/{DATA_SOURCE_ID}/{JOB_ID}`
+`GET https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/datasources/job/{REPORT_SUITE_ID}/{DATA_SOURCE_ID}/{JOB_ID}`
 
 ### Request and Response Examples
 
