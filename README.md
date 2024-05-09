@@ -15,7 +15,7 @@ These endpoints provide methods for viewing, creating, and deleting Data Sources
 
 * GET retrieve all accounts: Retrieves all Data Sources accounts for a given RSID
 * GET retrieve a single account: Retrieves a single Data Sources account by ID
-* PUT create an account: Create a Data Sources account
+* POST create an account: Create a Data Sources account
 * DELETE account: Deletes a Data Sources account
 
 **Data Sources Jobs**
@@ -181,11 +181,11 @@ The following table describes the retrieve a single Data Sources account respons
 | `ftp_username` | string | The FTP username |
 | `ftp_password` | string | The FTP password |
 
-## PUT create an account
+## POST create an account
 
 Use this endpoint to creata a Data Sources account. For more information regarding Data Sources accounts, see the [Getting started with data sources](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/getting-started) guide.
 
-`PUT https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/datasources/account/{REPORT_SUITE_ID}`
+`POST https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/datasources/account/{REPORT_SUITE_ID}`
 
 ### Request and Response Examples
 
@@ -196,7 +196,7 @@ Click the **Request** tab in the following example to see a cURL request for thi
 #### Request
 
 ```sh
-curl -X 'PUT' \
+curl -X 'POST' \
   "https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/data_sources/account/{REPORT_SUITE_ID}?type=generic&name=My%20Data%20Sources%20Account&email=noreply%40mycompany.com" \
   -H "accept: application/json" \
   -H "x-api-key: {CLIENT_ID}" \
