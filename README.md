@@ -46,7 +46,7 @@ Click the **Request** tab in the following example to see a cURL request for thi
 
 ```sh
 curl -X 'GET' \
-  "https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/data_sources/account/{REPORT_SUITE_ID}" \
+  "https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/datasources/account/examplersid" \
   -H "accept: application/json" \
   -H "x-api-key: {CLIENT_ID}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" 
@@ -57,35 +57,57 @@ curl -X 'GET' \
 ```json
 [
   {
-    "name": "Account 1",
-    "email": "noreply@mycompany.com",
-    "data_source_id": 1,
-    "type": "generic",
-    "ftp_hostname": "ftp.omniture.com",
-    "ftp_username": "my_username",
-    "ftp_password": "3z1475tf"
-  },
-  {
-    "name": "Account 2",
-    "email": "noreply@mycompany.com",
+    "name": "Salt Lake Location",
+    "email": "john@example.com",
     "data_source_id": 2,
     "type": "generic",
-    "ftp_hostname": "ftp.omniture.com",
-    "ftp_username": "my_username",
-    "ftp_password": "85txc712"
+    "date_created": "YYYY-03-19",
+    "ftp_hostname": "ftp4.omniture.com",
+    "ftp_username": "examplersid_4685934",
+    "ftp_password": "7rC1AW4b"
+  },
+  {
+    "name": "Sandy Location",
+    "email": "john@example.com",
+    "data_source_id": 308,
+    "type": "generic",
+    "date_created": "YYYY-08-08",
+    "ftp_hostname": "ftp4.omniture.com",
+    "ftp_username": "examplersid_4217476",
+    "ftp_password": "jfCT2xDO"
+  },
+  {
+    "name": "Lehi Location",
+    "email": "john@example.com",
+    "data_source_id": 404,
+    "type": "generic",
+    "date_created": "YYYY-04-16",
+    "ftp_hostname": "ftp4.omniture.com",
+    "ftp_username": "examplersid_01883528",
+    "ftp_password": "pWt73JDJ"
+  },
+  {
+    "name": "Ogden Location",
+    "email": "john@example.com",
+    "data_source_id": 405,
+    "type": "generic",
+    "date_created": "YYYY-04-23",
+    "ftp_hostname": "ftp4.omniture.com",
+    "ftp_username": "examplersid_211487109",
+    "ftp_password": "ybg6Gla9"
   }
 ]
 ```
 
 #### Request example details
 
-The example above requests all Data Sources accounts for `{REPORT_SUITE_ID}`.
+The example above requests all Data Sources accounts for `examplersid`.
 
 #### Response example details
 
 The example above returns the accounts with the following details:
 
-* Two accounts named `Account 1` and `Account 2` belong to the `{REPORT_SUITE_ID}`.
+* Four accounts belong to the `examplersid` report suite.
 * Each account has an `ftp_username` and `ftp_password` for use in the [Data Sources manager](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/manage).
 
 ### Request Parameters
@@ -103,7 +125,7 @@ The following table describes the retrieve Data Sources accounts response parame
 | Name | Type | Description |
 | --- | --- | --- |
 | `name` | string | The name of the Data Sources account |
-| `email` | string | The email address to recieve notifications regarding this Data Sources account |
+| `email` | string | The email address to receive notifications regarding this Data Sources account |
 | `data_source_id` | integer | The ID of the data source |
 | `type` | string | The type of data associated with the account |
 | `ftp_hostname` | string | The FTP host address |
@@ -126,7 +148,7 @@ Click the **Request** tab in the following example to see a cURL request for thi
 
 ```sh
 curl -X 'GET' \
-  "https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/data_sources/account/{REPORT_SUITE_ID}/{DATA_SOURCE_ID}" \
+  "https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/data_sources/account/examplersid/404" \
   -H "accept: application/json" \
   -H "x-api-key: {CLIENT_ID}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" 
@@ -136,26 +158,27 @@ curl -X 'GET' \
 
 ```json
 {
-  "name": "My Data Sources Account",
-  "email": "noreply@mycompany.com",
-  "data_source_id": 1,
+  "name": "Lehi Location",
+  "email": "john@example.com",
+  "data_source_id": 404,
   "type": "generic",
-  "ftp_hostname": "ftp.omniture.com",
-  "ftp_username": "my_username",
-  "ftp_password": "3z1475tf"
+  "date_created": "YYYY-04-16",
+  "ftp_hostname": "ftp4.omniture.com",
+  "ftp_username": "examplersid_01883528",
+  "ftp_password": "pWt73JDJ"
 }
 ```
 
 #### Request example details
 
-The example above requests the Data Sources account associated with the given `DATA_SOURCE_ID`.
+The example above requests the Data Sources account with the ID `404`.
 
 #### Response example details
 
 The example above returns the account with the following details:
 
-* The account is named `My Data Sources Account`.
-* The account has a `data_source_id` of `1`.
+* The account is named `Lehi Location`.
+* The account has a `data_source_id` of `404`.
 * The account has an `ftp_username` and `ftp_password` for use in the [Data Sources manager](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/manage).
 
 ### Request Parameters
@@ -174,7 +197,7 @@ The following table describes the retrieve a single Data Sources account respons
 | Name | Type | Description |
 | --- | --- | --- |
 | `name` | string | The name of the Data Sources account |
-| `email` | string | The email address to recieve notifications regarding this Data Sources account |
+| `email` | string | The email address to receive notifications regarding this Data Sources account |
 | `data_source_id` | integer | The data source ID |
 | `type` | string | The type of data associated with the account |
 | `ftp_hostname` | string | The FTP host address |
@@ -183,7 +206,7 @@ The following table describes the retrieve a single Data Sources account respons
 
 ## POST create an account
 
-Use this endpoint to creata a Data Sources account. For more information regarding Data Sources accounts, see the [Getting started with data sources](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/getting-started) guide.
+Use this endpoint to create a Data Sources account. For more information regarding Data Sources accounts, see the [Getting started with data sources](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/getting-started) guide.
 
 `POST https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/datasources/account/{REPORT_SUITE_ID}`
 
@@ -197,7 +220,7 @@ Click the **Request** tab in the following example to see a cURL request for thi
 
 ```sh
 curl -X 'POST' \
-  "https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/data_sources/account/{REPORT_SUITE_ID}?type=generic&name=My%20Data%20Sources%20Account&email=noreply%40mycompany.com" \
+  "https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/datasources/account/examplersid?type=generic&name=Test_Account&email=john%40example.com" \
   -H "accept: application/json" \
   -H "x-api-key: {CLIENT_ID}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" 
@@ -207,13 +230,14 @@ curl -X 'POST' \
 
 ```json
 {
-  "name": "My Data Sources Account",
-  "email": "noreply@mycompany.com",
-  "data_source_id": 1,
+  "name": "Test_Account",
+  "email": "john@example.com",
+  "data_source_id": 406,
   "type": "generic",
-  "ftp_hostname": "ftp.omniture.com",
-  "ftp_username": "my_username",
-  "ftp_password": "3z1475tf"
+  "date_created": "YYYY-05-10",
+  "ftp_hostname": "ftp4.omniture.com",
+  "ftp_username": "examplersid_140872873",
+  "ftp_password": "QapgaEVd"
 }
 ```
 
@@ -222,16 +246,16 @@ curl -X 'POST' \
 The example above requests to create an account with the following details:
 
 * The account `type` is `generic`.
-* The account `name` is `My Data Sources Account`. Note that query parameters cannot contain true "space" characters, and must be replaced with `%20` as shown in the example.
-* The `email` where notifications are sent is `noreply@mycompany.com`. Note that query parameters cannot contain true `@` characters, and must be replaced with `%40` as shown in the example.
+* The account `name` is `Test_Account`.
+* The `email` where notifications are sent is `john@example.com`. Note that query parameters cannot contain true `@` characters, and must be replaced with `%40` as shown in the example.
 
 #### Response example details
 
 The example above responds with the following details:
 
-* The account `name` is `My Data Sources Account`.
-* The `email` where notifications are sent is `noreply@mycompany.com`.
-* The `data_source_id` is `1`.
+* The account `name` is `Test_Account`.
+* The `email` where notifications are sent is `john@example.com`.
+* The `data_source_id` is `406`.
 * The account has an `ftp_username` and `ftp_password` for use in the [Data Sources manager](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/manage).
 
 ### Request Parameters
@@ -243,7 +267,7 @@ The following table describes the create a Data Sources account request paramete
 | `report_suite_id` | required | string | The report suite ID the new account will belong to |
 | `type` | optional | string | The type of data associated with the account |
 | `name` | optional | string | The name of the Data Sources account |
-| `email` | optional | string | The email address to recieve notifications regarding this Data Sources account |
+| `email` | optional | string | The email address to receive notifications regarding this Data Sources account |
 
 ### Response Parameters
 
@@ -252,7 +276,7 @@ The following table describes the create a Data Sources account response paramet
 | Name | Type | Description |
 | --- | --- | --- |
 | `name` | string | The name of the Data Sources account |
-| `email` | string | The email address to recieve notifications regarding this Data Sources account |
+| `email` | string | The email address to receive notifications regarding this Data Sources account |
 | `data_source_id` | integer | The data source ID |
 | `type` | string | The type of data associated with the account |
 | `ftp_hostname` | string | The FTP host address |
