@@ -299,7 +299,7 @@ Click the **Request** tab in the following example to see a cURL request for thi
 
 ```sh
 curl -X 'DELETE' \
-  "https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/data_sources/account/{REPORT_SUITE_ID}/{DATA_SOURCE_ID}" \
+  "https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/data_sources/account/examplersid/406" \
   -H "accept: application/json" \
   -H "x-api-key: {CLIENT_ID}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" 
@@ -310,13 +310,13 @@ curl -X 'DELETE' \
 ```json
 {
   "success": true,
-  "message": "Operation successful"
+  "message": "Account deleted"
 }
 ```
 
 #### Request example details
 
-The example above requests to `DELETE` the Data Sources account with the corresponding `DATA_SOURCE_ID`.
+The example above requests to `DELETE` the Data Sources account with the `406` ID.
 
 #### Response example details
 
@@ -387,13 +387,13 @@ curl -X 'PUT'
 
 ```json
 {
-  "Filename": "my_data_file.txt",
-  "The number of rows successfully processed": 100,
-  "Job ID": 12345,
-  "Status of the job": "processing",
-  "Date the job was created": "1/1/2024 00:00:00",
-  "Date the job began processing": "1/1/2024 00:00:00",
-  "Date the job finished processing": "1/1/2024 00:00:00"
+  "filename": "uploaddata_for_october.tab",
+  "rows": 3,
+  "job_id": 33376779,
+  "status": "success",
+  "uploaded_date": "YYYY-10-25 13:22:31",
+  "started_processing_date": "YYYY-10-25 13:23:01",
+  "finished_processing_date": "YYYY-10-25 13:23:03"
 }
 ```
 
@@ -419,12 +419,11 @@ The following table describes the upload data request parameters:
 | `uri` |  | string |  |
 | `url` |  | string |  |
 | `description` |  | string | Description of the file |
-| `readable` |  | boolean |  |
-| `filename` |  | string |  |
+| `readable` |  | boolean | Whether the file is readable |
+| `filename` |  | string | The name of the file |
 | `open` |  | boolean |  |
 | `inputStream` |  |  |  |
 | `size` |  | integer |  |
-| `inputStream` |  |  |  |
 
 ### Response Parameters
 
@@ -432,13 +431,13 @@ The following table describes the upload data response parameters:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `Filename` | string | The filename of the file ingested by the Data Sources job |
-| `The number of rows successfully processed` | integer | The number of rows successfully processed by the Data Sources job |
-| `Job ID` | integer | The Data Source job ID |
-| `Status of the job` | string | The status of the Data Source job |
-| `Date the job was created` | string | The date the Data Source job was created |
-| `Date the job began processing` | string | The date the Data Source job began processing |
-| `Date the job finished processing` | string | The date the Data Source job finished processing |
+| `filename` | string | The filename of the file ingested by the Data Sources job |
+| `rows` | integer | The number of rows successfully processed by the Data Sources job |
+| `job_id` | integer | The data source job ID |
+| `status` | string | The status of the data source job |
+| `uploaded_date` | string | The date the data source job was created |
+| `started_processing_date` | string | The date the data source job began processing |
+| `finished_processing_date` | string | The date the data source job finished processing |
 
 ## GET retrieve all jobs
 
@@ -456,7 +455,7 @@ Click the **Request** tab in the following example to see a cURL request for thi
 
 ```sh
 curl -X 'GET' \
-  "https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/job/{REPORT_SUITE_ID}/{DATA_SOURCE_ID}" \
+  "https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/job/examplersid/276?status=success" \
   -H "accept: application/json" \
   -H "x-api-key: {CLIENT_ID}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" 
@@ -469,22 +468,22 @@ curl -X 'GET' \
   "page": 1,
   "jobs": [
     {
-      "Filename": "my_data_file.txt",
-      "The number of rows successfully processed": 100,
-      "Job ID": 12345,
-      "Status of the job": "processing",
-      "Date the job was created": "1/1/YYYY 00:00:00",
-      "Date the job began processing": "1/1/YYYY 00:00:00",
-      "Date the job finished processing": "1/1/YYYY 00:00:00"
+      "filename": "uploaddata_for_october.tab",
+      "rows": 3,
+      "job_id": 33376779,
+      "status": "success",
+      "uploaded_date": "YYYY-10-25 13:22:31",
+      "started_processing_date": "YYYY-10-25 13:23:01",
+      "finished_processing_date": "YYYY-10-25 13:23:03"
     },
     {
-      "Filename": "my_data_file.fin",
-      "The number of rows successfully processed": 0,
-      "Job ID": 67890,
-      "Status of the job": "processing",
-      "Date the job was created": "1/1/YYYY 01:00:00",
-      "Date the job began processing": "1/1/YYYY 01:00:00",
-      "Date the job finished processing": "1/1/YYYY 01:00:00"
+      "filename": "uploaddata_for_november.tab",
+      "rows": 3,
+      "job_id": 33376787,
+      "status": "success",
+      "uploaded_date": "YYYY-11-25 11:41:21",
+      "started_processing_date": "YYYY-11-25 11:42:01",
+      "finished_processing_date": "YYYY-11-25 11:42:03"
     }
   ],
   "total_pages": 1
@@ -493,7 +492,17 @@ curl -X 'GET' \
 
 #### Request example details
 
+The example above requests the following:
+
+* The jobs belonging to the account `276`.
+* The only jobs to be returned must have the `success` status.
+
 #### Response example details
+
+The example above returns the following:
+
+* Two jobs that have the `success` status belong to the account.
+* The respective `job_id` for each of the jobs.
 
 ### Request Parameters
 
@@ -503,7 +512,7 @@ The following table describes the retrieve all jobs request parameters:
 | --- | --- | --- | --- |
 | `report_suite_id` | required | string | The report suite ID associated with the Data Sources account |
 | `data_source_id` | required | string | The data source ID of the account to retrieve jobs from |
-| `status` | optional | string | Filters search by job status |
+| `status` | required | string | Filters search by job status. Possible status' are `uploaded`, `processing`, `success`, `failure`, and `deleted`. |
 | `start_date` | optional | string | How far back to begin the search. Should be earlier than `end_date`. Defaults to one month ago. Should be formatted as "yyyy-mm-dd hh:mm:ss". |
 | `end_date` | optional | string | How far back to end the search. Should be more recent than `start_date`. Defaults to today. Should be formatted as "yyyy-mm-dd hh:mm:ss". |
 | `page` | optional | string | Which page of the results to retrieve. Page `1` is the first page. If this value exceeds the available pages, no results will be returned. |
@@ -515,14 +524,14 @@ The following table describes the retrieve all jobs response parameters:
 | Name | Type | Description |
 | --- | --- | --- |
 | `page` | integer | Which page of the results was retrieved. Page `1` is the first page. |
-| `jobs` | container | The jobs retrieved in the search. Contains the `Filename`, `The number of rows successfully processed`, `Job ID`, `Status of the job`, `Date the job was created`, `Date the job began processing`, and `Date the job finished processing` parameters. |
-| `Filename` | string | The filename of the file ingested by the Data Sources job |
-| `The number of rows successfully processed` | integer | The number of rows successfully processed by the Data Sources job |
-| `Job ID` | integer | The data source job ID |
-| `Status of the job` | string | The status of the data source job |
-| `Date the job was created` | string | The date the data source job was created |
-| `Date the job began processing` | string | The date the data source job began processing |
-| `Date the job finished processing` | string | The date the data source job finished processing |
+| `jobs` | container | The jobs retrieved in the search. Contains the `filename`, `rows`, `job_id`, `status`, `uploaded_date`, `started_processing_date`, and `finished_processing_date` parameters. |
+| `filename` | string | The filename of the file ingested by the Data Sources job |
+| `rows` | integer | The number of rows successfully processed by the Data Sources job |
+| `job_id` | integer | The data source job ID |
+| `status` | string | The status of the data source job |
+| `uploaded_date` | string | The date the data source job was created |
+| `started_processing_date` | string | The date the data source job began processing |
+| `finished_processing_date` | string | The date the data source job finished processing |
 | `total_pages` | integer | The total number of pages returned by the search |
 
 ## GET retrieve a single job
@@ -541,7 +550,7 @@ Click the **Request** tab in the following example to see a cURL request for thi
 
 ```sh
 curl -X 'GET' \
-  "https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/job/{REPORT_SUITE_ID}/{DATA_SOURCE_ID}/{JOB_ID}" \
+  "https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/job/examplersid/276/33376779" \
   -H "accept: application/json" \
   -H "x-api-key: {CLIENT_ID}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" 
@@ -551,19 +560,26 @@ curl -X 'GET' \
 
 ```json
 {
-  "Filename": "my_data_file.txt",
-  "The number of rows successfully processed": 100,
-  "Job ID": 12345,
-  "Status of the job": "processing",
-  "Date the job was created": "1/1/2024 00:00:00",
-  "Date the job began processing": "1/1/2024 00:00:00",
-  "Date the job finished processing": "1/1/2024 00:00:00"
+  "filename": "uploaddata_for_october.tab",
+  "rows": 3,
+  "job_id": 33376779,
+  "status": "success",
+  "uploaded_date": "YYYY-10-25 13:22:31",
+  "started_processing_date": "YYYY-10-25 13:23:01",
+  "finished_processing_date": "YYYY-10-25 13:23:03"
 }
 ```
 
 #### Request example details
 
+The example above requests information regarding the job `33376779`.
+
 #### Response example details
+
+The example above returns the following:
+
+* The `filename` of the job is `uploaddata_for_october.tab`.
+* The `status` of the job is `success`.
 
 ### Request Parameters
 
@@ -581,13 +597,13 @@ The following table describes the retrieve a single job response parameters:
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `Filename` | string | The filename of the file ingested by the Data Sources job |
-| `The number of rows successfully processed` | integer | The number of rows successfully processed by the Data Sources job |
-| `Job ID` | integer | The data source job ID |
-| `Status of the job` | string | The status of the data source job |
-| `Date the job was created` | string | The date the data source job was created |
-| `Date the job began processing` | string | The date the data source job began processing |
-| `Date the job finished processing` | string | The date the data source job finished processing |
+| `filename` | string | The filename of the file ingested by the Data Sources job |
+| `rows` | integer | The number of rows successfully processed by the Data Sources job |
+| `job_id` | integer | The data source job ID |
+| `status` | string | The status of the data source job |
+| `uploaded_date` | string | The date the data source job was created |
+| `started_processing_date` | string | The date the data source job began processing |
+| `finished_processing_date` | string | The date the data source job finished processing |
 
 ## Status codes
 
