@@ -13,18 +13,18 @@ The endpoints described in this guide are routed through `analytics.adobe.io`. T
 
 These endpoints provide methods for viewing, creating, and deleting Data Sources accounts
 
-* GET retrieve all accounts: Retrieves all Data Sources accounts for a given RSID
-* GET retrieve a single account: Retrieves a single Data Sources account by ID
-* POST create an account: Create a Data Sources account
-* DELETE account: Deletes a Data Sources account
+* [GET retrieve all accounts](#get-retrieve-all-accounts): Retrieves all Data Sources accounts for a given RSID
+* [GET retrieve a single account](#get-retrieve-a-single-account): Retrieves a single Data Sources account by ID
+* [POST create an account](#post-create-an-account): Create a Data Sources account
+* [DELETE account](#delete-account): Deletes a Data Sources account
 
 **Data Sources Jobs**
 
 These endpoints provide methods for uploading data to a Data Source account and viewing previous uploads
 
-* PUT upload data: Uploads a file to a Data Sources account
-* GET retrieve all jobs: Retrieves all jobs associated with a Data Sources account
-* GET retrieve a single job: Retrieves a single job by ID
+* [PUT upload data](#put-upload-data): Uploads a file to a Data Sources account
+* [GET retrieve all jobs](#get-retrieve-all-jobs): Retrieves all jobs associated with a Data Sources account
+* [GET retrieve a single job](#get-retrieve-a-single-job): Retrieves a single job by ID
 
 <InlineAlert variant="info" slots="text" />
 
