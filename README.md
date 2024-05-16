@@ -342,7 +342,7 @@ The following table describes the DELETE Data Sources account response parameter
 
 ## PUT upload data
 
-Use this endpoint to upload a data file to a Data Sources account. Data files must be uploaded in the methods described in the [Upload data sources file to Adobe](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/file-upload) guide.
+Use this endpoint to upload a data file to a Data Sources account. For more information on data uploads, please see the [Upload data sources file to Adobe](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/file-upload) guide.
 
 `PUT https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/datasources/job/{REPORT_SUITE_ID}/{DATA_SOURCE_ID}`
 
@@ -355,51 +355,42 @@ Click the **Request** tab in the following example to see a cURL request for thi
 #### Request
 
 ```sh
-curl -X 'PUT'
-  "https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/job/{REPORT_SUITE_ID}/{DATA_SOURCE_ID}" \
-  -H "Content-Type: application/json" \
-  -H "x-api-key: {CLIENT_ID}" \
-  -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -d '{
-  "contentType": "string",
-  "originalFilename": "string",
-  "name": "string",
-  "bytes": [
-    "string"
-  ],
-  "empty": true,
-  "resource": {
-    "file": "string",
-    "uri": "string",
-    "url": "string",
-    "description": "string",
-    "readable": true,
-    "filename": "string",
-    "open": true,
-    "inputStream": {}
-  },
-  "size": 0,
-  "inputStream": {}
-}'
+curl  -X PUT \
+  'https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/datasources/job/examplersid/406' \
+  --H 'Accept: application/json' \
+  --H 'x-api-key: {CLIENT_ID}' \
+  --H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  --F 'file="@/home/user/documents/example_upload.txt"'
 ```
 
 #### Response
 
 ```json
 {
-  "filename": "uploaddata_for_october.tab",
+  "filename": "example_upload.txt",
   "rows": 3,
-  "job_id": 33376779,
-  "status": "success",
+  "job_id": 33376793,
+  "status": "uploaded",
   "uploaded_date": "YYYY-10-25 13:22:31",
-  "started_processing_date": "YYYY-10-25 13:23:01",
-  "finished_processing_date": "YYYY-10-25 13:23:03"
+  "started_processing_date": null,
+  "finished_processing_date": null
 }
 ```
 
 #### Request example details
 
+The example above requests the following:
+
+* The upload is sent to the Data Sources account with the ID `406`.
+* The file to be uploaded is specified in the `--F` section of the request. A `file=` precedes the file path, which is specified by an `@` and contained within quotation marks. For more information on what files can be uploaded to Adobe, please see the [File Format](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/file-format) guide.
+
 #### Response example details
+
+The example response above contains the following details:
+
+* The `job_id` is `33376793`.
+* The `status` is `uploaded`.
+* The `started_processing_date` and `finished_processing_date` parameters are `null` because the job has not yet begun these processes.
 
 ### Request Parameters
 
@@ -409,21 +400,7 @@ The following table describes the upload data request parameters:
 | --- | --- | --- | --- |
 | `report_suite_id` | required | string | The report suite ID associated with the Data Sources account |
 | `data_source_id` | required | string | The Data Source ID of the account to receive the file |
-| `contentType` |  | string |  |
-| `originalFilename` |  | string |  |
-| `name` |  | string |  |
-| `bytes` |  | string |  |
-| `empty` |  | boolean | Whether the file is empty |
-| `resource` |  | container | Information regarding the file to upload. Contains the `file`, `uri`, `url`, `description`, `readable`, `filename`, `open`, and `inputStream` parameters. |
-| `file` |  | string |  |
-| `uri` |  | string |  |
-| `url` |  | string |  |
-| `description` |  | string | Description of the file |
-| `readable` |  | boolean | Whether the file is readable |
-| `filename` |  | string | The name of the file |
-| `open` |  | boolean |  |
-| `inputStream` |  |  |  |
-| `size` |  | integer |  |
+| `file` | required | string | The file path of the file to be uploaded. An `@` symbol must precede the location to ensure the request is properly sent. Certain API clients such as Postman have features that will automatically format your call to include the file upload details. In these cases please refer to their respective documentation for an accurate API call. |
 
 ### Response Parameters
 
@@ -512,7 +489,7 @@ The following table describes the retrieve all jobs request parameters:
 | --- | --- | --- | --- |
 | `report_suite_id` | required | string | The report suite ID associated with the Data Sources account |
 | `data_source_id` | required | string | The data source ID of the account to retrieve jobs from |
-| `status` | required | string | Filters search by job status. Possible status' are `uploaded`, `processing`, `success`, `failure`, and `deleted`. |
+| `status` | required | string | Filters search by job status. Possible statuses are `uploaded`, `processing`, `success`, `failure`, and `deleted`. |
 | `start_date` | optional | string | How far back to begin the search. Should be earlier than `end_date`. Defaults to one month ago. Should be formatted as "yyyy-mm-dd hh:mm:ss". |
 | `end_date` | optional | string | How far back to end the search. Should be more recent than `start_date`. Defaults to today. Should be formatted as "yyyy-mm-dd hh:mm:ss". |
 | `page` | optional | string | Which page of the results to retrieve. Page `1` is the first page. If this value exceeds the available pages, no results will be returned. |
