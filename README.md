@@ -174,15 +174,15 @@ curl -X 'GET' \
 
 #### Request example details
 
-The example above requests the Data Sources account with the ID `621`.
+The example above requests the Data Sources account associated with the ID `621`.
 
 #### Response example details
 
-The example above returns the account with the following details:
+The example above returns the account `621` with the following details:
 
-* The account is named `Lehi Location`.
-* The account has a `data_source_id` of `621`.
-* The account has an `ftp_username` and `ftp_password` for use in the [Data Sources manager](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/manage).
+* The account is named `Example Location 2`.
+* The `data_source_id` is `621`.
+* The FTP account information associated with the Data Sources account, for more information see the [Data Sources manager](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/manage).
 
 ### Request Parameters
 
