@@ -207,7 +207,7 @@ The following table describes the GET a single Data Sources account response par
 | `ftp_username` | string | The FTP username |
 | `ftp_password` | string | The FTP password |
 
-## POST create an account
+## POST an account
 
 Use this endpoint to create a Data Sources account. For more information regarding Data Sources accounts, see the [Getting started with data sources](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/getting-started) guide.
 
