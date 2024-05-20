@@ -418,7 +418,7 @@ The following table describes the upload data response parameters:
 | `started_processing_date` | string | The date the data source job began processing |
 | `finished_processing_date` | string | The date the data source job finished processing |
 
-## GET retrieve all jobs
+## GET all jobs
 
 Use this endpoint to retrieve all jobs associated with a Data Sources account.
 
@@ -513,7 +513,7 @@ The following table describes the retrieve all jobs response parameters:
 | `finished_processing_date` | string | The date the data source job finished processing |
 | `total_pages` | integer | The total number of pages returned by the search |
 
-## GET retrieve a single job
+## GET a single job
 
 Use this endpoint to retrieve information regarding a single job by its job ID.
 
