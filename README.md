@@ -473,15 +473,15 @@ curl -X 'GET' \
 
 The example above requests the following:
 
-* The jobs belonging to the account `15`.
-* The only jobs to be returned must have the `success` status.
+* The jobs belonging to the Data Sources account ID `15`.
+* Return only jobs filtered for `success` status.
 
 #### Response example details
 
 The example above returns the following:
 
-* Two jobs that have the `success` status belong to the account.
-* The respective `job_id` for each of the jobs.
+* Two jobs have the `success` status that belong to this account: `uploaddata_for_october.tab` and `uploaddata_for_november.tab`.
+* The respective `job_id` for the jobs: `uploaddata_for_october.tab` and `uploaddata_for_november.tab`.
 
 ### Request Parameters
 
