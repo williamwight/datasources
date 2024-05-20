@@ -420,7 +420,7 @@ The following table describes the upload data response parameters:
 
 ## GET all jobs
 
-Use this endpoint to retrieve all jobs associated with a Data Sources account.
+Use this endpoint to retrieve all jobs associated with a Data Sources account. Jobs are automatically created with each file upload.
 
 `GET https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/datasources/job/{REPORT_SUITE_ID}/{DATA_SOURCE_ID}`
 
