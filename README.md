@@ -101,13 +101,13 @@ curl -X 'GET' \
 
 #### Request example details
 
-The example above requests all Data Sources accounts for `examplersid`.
+The example above requests all Data Sources accounts for the `examplersid` report suite ID.
 
 #### Response example details
 
-The example above returns the accounts with the following details:
+The example above lists four Data Sources accounts with the following details:
 
-* Four accounts belong to the `examplersid` report suite.
+* In this case each account represents a data source location.
 * Each account has an `ftp_username` and `ftp_password` for use in the [Data Sources manager](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/manage).
 
 ### Request Parameters
