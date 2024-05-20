@@ -266,7 +266,7 @@ The following table describes the create a Data Sources account request paramete
 
 | Name | Required | Type | Description |
 | --- | --- | --- | --- |
-| `rsid` | required | string | The report suite ID the new account will belong to |
+| `rsid` | required | string | The report suite ID associated with the Data Sources account |
 | `type` | optional | string | The type of data associated with the account |
 | `name` | optional | string | The name of the Data Sources account |
 | `email` | optional | string | The email address to receive notifications regarding this Data Sources account |
