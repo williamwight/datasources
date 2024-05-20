@@ -246,11 +246,11 @@ curl -X 'POST' \
 
 #### Request example details
 
-The example above requests to create an account with the following details:
+The account details are specified as query parameters, including the required `rsid`. The example above requests to create an account with the following details:
 
-* The account `type` is `generic`.
+* The account `type` is `generic`. For more information see [Data Sources manager](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/manage).
 * The account `name` is `Test_Account`.
-* The `email` where notifications are sent is `john@example.com`. Note that query parameters cannot contain true `@` characters, and must be replaced with `%40` as shown in the example.
+* The `email` notifications adress is specified as `john%40example.com`. Note that query parameters cannot contain true `@` characters, and must be replaced with `%40` as shown in the example.
 
 #### Response example details
 
