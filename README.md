@@ -392,7 +392,7 @@ The example response above contains the following details:
 
 * The file upload is associated with a `job_id`: `33376793`.
 * The successful upload is indicated by `status`: `uploaded`.
-* The `started_processing_date` and `finished_processing_date` parameters are `null` because the job has not yet begun these processes.
+* Adobe performs a processing operation associated with the `job_id`. This is indicated by a `started_processing_date` and a `finished_processing_date`. These parameters are shown in the response as `null` because the job may take a few minutes to commence.
 
 ### Request Parameters
 
