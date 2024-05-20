@@ -115,7 +115,7 @@ The example above lists four Data Sources accounts with the following details:
 
 ### Request Parameters
 
-The following table describes the retrieve Data Sources accounts request parameters:
+The GET all accounts endpoint includes the following request parameter:
 
 | Name | Required | Type | Description |
 | --- | --- | --- | --- |
