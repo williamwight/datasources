@@ -151,7 +151,7 @@ Click the **Request** tab in the following example to see a cURL request for thi
 
 ```sh
 curl -X 'GET' \
-  "https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/data_sources/account/examplersid/404" \
+  "https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/data_sources/account/examplersid/621" \
   -H "accept: application/json" \
   -H "x-api-key: {CLIENT_ID}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" 
@@ -161,27 +161,27 @@ curl -X 'GET' \
 
 ```json
 {
-  "name": "Lehi Location",
+  "name": "Example Location 2",
   "email": "john@example.com",
-  "data_source_id": 404,
+  "data_source_id": 621,
   "type": "generic",
-  "date_created": "YYYY-04-16",
+  "date_created": "YYYY-08-08",
   "ftp_hostname": "ftp4.omniture.com",
-  "ftp_username": "examplersid_01883528",
-  "ftp_password": "pWt73JDJ"
+  "ftp_username": "examplersid_4217476",
+  "ftp_password": "example_password"
 }
 ```
 
 #### Request example details
 
-The example above requests the Data Sources account with the ID `404`.
+The example above requests the Data Sources account with the ID `621`.
 
 #### Response example details
 
 The example above returns the account with the following details:
 
 * The account is named `Lehi Location`.
-* The account has a `data_source_id` of `404`.
+* The account has a `data_source_id` of `621`.
 * The account has an `ftp_username` and `ftp_password` for use in the [Data Sources manager](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/manage).
 
 ### Request Parameters
@@ -235,7 +235,7 @@ curl -X 'POST' \
 {
   "name": "Test_Account",
   "email": "john@example.com",
-  "data_source_id": 406,
+  "data_source_id": 621,
   "type": "generic",
   "date_created": "YYYY-05-10",
   "ftp_hostname": "ftp4.omniture.com",
@@ -258,7 +258,7 @@ The example above responds with the following details:
 
 * The account `name` is `Test_Account`.
 * The `email` where notifications are sent is `john@example.com`.
-* The `data_source_id` is `406`.
+* The `data_source_id` is `621`.
 * The account has an `ftp_username` and `ftp_password` for use in the [Data Sources manager](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/manage).
 
 ### Request Parameters
@@ -302,7 +302,7 @@ Click the **Request** tab in the following example to see a cURL request for thi
 
 ```sh
 curl -X 'DELETE' \
-  "https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/data_sources/account/examplersid/406" \
+  "https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/data_sources/account/examplersid/621" \
   -H "accept: application/json" \
   -H "x-api-key: {CLIENT_ID}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" 
@@ -319,7 +319,7 @@ curl -X 'DELETE' \
 
 #### Request example details
 
-The example above requests to `DELETE` the Data Sources account with the `406` ID.
+The example above requests to `DELETE` the Data Sources account with the `621` ID.
 
 #### Response example details
 
@@ -359,7 +359,7 @@ Click the **Request** tab in the following example to see a cURL request for thi
 
 ```sh
 curl  -X PUT \
-  'https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/datasources/job/examplersid/406' \
+  'https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/datasources/job/examplersid/621' \
   --H 'Accept: application/json' \
   --H 'x-api-key: {CLIENT_ID}' \
   --H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -384,7 +384,7 @@ curl  -X PUT \
 
 The example above requests the following:
 
-* The upload is sent to the Data Sources account with the ID `406`.
+* The upload is sent to the Data Sources account with the ID `621`.
 * The file to be uploaded is specified in the `--F` section of the request. A `file=` precedes the file path, which is specified by an `@` and contained within quotation marks. For more information on what files can be uploaded to Adobe, please see the [File Format](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/file-format) guide.
 
 #### Response example details
@@ -435,7 +435,7 @@ Click the **Request** tab in the following example to see a cURL request for thi
 
 ```sh
 curl -X 'GET' \
-  "https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/job/examplersid/276?status=success" \
+  "https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/job/examplersid/621?status=success" \
   -H "accept: application/json" \
   -H "x-api-key: {CLIENT_ID}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" 
@@ -474,7 +474,7 @@ curl -X 'GET' \
 
 The example above requests the following:
 
-* The jobs belonging to the account `276`.
+* The jobs belonging to the account `621`.
 * The only jobs to be returned must have the `success` status.
 
 #### Response example details
@@ -530,7 +530,7 @@ Click the **Request** tab in the following example to see a cURL request for thi
 
 ```sh
 curl -X 'GET' \
-  "https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/job/examplersid/276/33376779" \
+  "https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/job/examplersid/621/33376779" \
   -H "accept: application/json" \
   -H "x-api-key: {CLIENT_ID}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" 
