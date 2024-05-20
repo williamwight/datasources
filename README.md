@@ -342,7 +342,7 @@ The following table describes the DELETE Data Sources account response parameter
 | `success` | boolean | Whether the delete succeeded |
 | `message` | string | Indicates the action of the operation |
 
-## PUT upload data
+## PUT data
 
 Use this endpoint to upload a data file to a Data Sources account. For more information on data uploads, see the [Upload data sources file to Adobe](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/file-upload) guide.
 
@@ -384,7 +384,7 @@ curl  -X PUT \
 The example above requests the following:
 
 * The upload is sent to the Data Sources account with the ID `621`.
-* The file to be uploaded is specified in the `--F` section of the request. A `file=` precedes the file path, which is specified by an `@` and contained within quotation marks. For more information on what files can be uploaded to Adobe, please see the [File Format](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/file-format) guide.
+* The file to be uploaded is specified in the `--F` section of the request. A `file=` precedes the file path, which is specified by an `@` and contained within quotation marks. For more information on what files can be uploaded to Adobe, see the [File Format](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/file-format) guide.
 
 #### Response example details
 
