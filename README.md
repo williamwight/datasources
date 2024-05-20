@@ -135,7 +135,7 @@ The following table describes the GET all accounts response parameters:
 | `ftp_username` | string | The FTP username |
 | `ftp_password` | string | The FTP password |
 
-## GET retrieve a single account
+## GET a single account
 
 Use this endpoint to retrieve information about a single Data Sources account. For more information regarding Data Sources accounts, see the [Getting started with data sources](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/getting-started) guide.
 
