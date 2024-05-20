@@ -390,8 +390,8 @@ The example above requests the following:
 
 The example response above contains the following details:
 
-* The `job_id` is `33376793`.
-* The `status` is `uploaded`.
+* The file upload is associated with a `job_id`: `33376793`.
+* The successful upload is indicated by `status`: `uploaded`.
 * The `started_processing_date` and `finished_processing_date` parameters are `null` because the job has not yet begun these processes.
 
 ### Request Parameters
