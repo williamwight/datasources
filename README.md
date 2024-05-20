@@ -580,9 +580,9 @@ The following table describes the GET a single job response parameters:
 | `rows` | integer | The number of rows successfully processed by the Data Sources job |
 | `job_id` | integer | The data source job ID |
 | `status` | string | The status of the data source job |
-| `uploaded_date` | string | The date the data source job was created |
-| `started_processing_date` | string | The date the data source job began processing |
-| `finished_processing_date` | string | The date the data source job finished processing |
+| `uploaded_date` | string | The date the data source job is created |
+| `started_processing_date` | string | The date the data source job begins processing |
+| `finished_processing_date` | string | The date the data source job finishes processing |
 
 ## Status codes
 
