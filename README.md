@@ -340,7 +340,7 @@ The following table describes the DELETE Data Sources account response parameter
 | Name | Type | Description |
 | --- | --- | --- |
 | `success` | boolean | Whether the delete succeeded |
-| `message` | string | Message regarding the status of the operation |
+| `message` | string | Indicates the action of the operation |
 
 ## PUT upload data
 
