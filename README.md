@@ -490,7 +490,7 @@ The following table describes the GET all jobs request parameters:
 | Name | Required | Type | Description |
 | --- | --- | --- | --- |
 | `rsid` | required | string | The report suite ID associated with the Data Sources account |
-| `data_source_id` | required | string | The data source ID of the account to retrieve jobs from |
+| `data_source_id` | required | string | The Data Sources account ID |
 | `status` | required | string | Filters search by job status. Possible statuses are `uploaded`, `processing`, `success`, `failure`, and `deleted`. |
 | `start_date` | optional | string | How far back to begin the search. Should be earlier than `end_date`. Defaults to one month ago. Should be formatted as "yyyy-mm-dd hh:mm:ss". |
 | `end_date` | optional | string | How far back to end the search. Should be more recent than `start_date`. Defaults to today. Should be formatted as "yyyy-mm-dd hh:mm:ss". |
