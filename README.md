@@ -5,26 +5,26 @@ description: Use Analytics Data Sources APIs to manage accounts and upload data.
 
 # Data Sources Guide
 
-The Analytics 2.0 Data Sources API endpoints provide methods for you to create, delete, and view Data Sources accounts and perform and view data uploads to Data Sources accounts. See the [Data Sources overview](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/overview) for more information regarding the Data Sources service and functions.
+The Analytics 2.0 Data Sources API endpoints provide methods for you to create, view, delete, and upload to Data Sources accounts. See the [Data Sources overview](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/overview) for more information regarding Data Sources services and functions.
 
 The endpoints described in this guide are routed through `analytics.adobe.io`. To use them, you must first create a client with access to the Adobe Developer Console. For more information, see [Getting started with the Analytics API](https://developer.adobe.com/analytics-apis/docs/2.0/guides/) for more information.
 
 **Data Sources Accounts**
 
-These endpoints provide methods for viewing, creating, and deleting Data Sources accounts
+These endpoints provide methods for viewing, creating, and deleting Data Sources accounts:
 
-* [GET retrieve all accounts](#get-retrieve-all-accounts): Retrieves all Data Sources accounts for a given RSID
-* [GET retrieve a single account](#get-retrieve-a-single-account): Retrieves a single Data Sources account by ID
-* [POST create an account](#post-create-an-account): Create a Data Sources account
+* [GET all accounts](#get-retrieve-all-accounts): Retrieves all Data Sources accounts for a given rsid
+* [GET a single account](#get-retrieve-a-single-account): Retrieves a single Data Sources account by ID
+* [POST an account](#post-create-an-account): Create a Data Sources account
 * [DELETE account](#delete-account): Deletes a Data Sources account
 
 **Data Sources Jobs**
 
-These endpoints provide methods for uploading data to a Data Source account and viewing previous uploads
+Use Data Sources Jobs endpoints to upload and view data to a Data Sources account:
 
-* [PUT upload data](#put-upload-data): Uploads a file to a Data Sources account
-* [GET retrieve all jobs](#get-retrieve-all-jobs): Retrieves all jobs associated with a Data Sources account
-* [GET retrieve a single job](#get-retrieve-a-single-job): Retrieves a single job by ID
+* [PUT data](#put-upload-data): Uploads a file to a Data Sources account
+* [GET all jobs](#get-retrieve-all-jobs): Retrieves all jobs associated with a Data Sources account
+* [GET a single job](#get-retrieve-a-single-job): Retrieves a single job by ID
 
 <InlineAlert variant="info" slots="text" />
 
