@@ -402,7 +402,7 @@ The following table describes the upload data request parameters:
 | --- | --- | --- | --- |
 | `rsid` | required | string | The report suite ID associated with the Data Sources account |
 | `data_source_id` | required | string | The Data Source ID of the account to receive the file |
-| `file` | required | string | The file path of the file to be uploaded. An `@` symbol must precede the location to ensure the request is properly sent. Certain API clients such as Postman have features that will automatically format your call to include the file upload details. In these cases refer to their respective documentation for an accurate API call. |
+| `file` | required | string | The file path of the file to be uploaded. An `@` symbol must precede the location to ensure the request is properly sent. Certain API clients such as Postman have features that will automatically format your call to include the file upload details. In these cases, refer to the client documentation for specific formatting. |
 
 ### Response Parameters
 
