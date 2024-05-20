@@ -107,7 +107,8 @@ The example above requests all Data Sources accounts for the `examplersid` repor
 
 The example above lists four Data Sources accounts with the following details:
 
-* In this case each account represents a data source location.
+* In this case, each account represents a data source location.
+* A `data_source_id` is provided for working with specific accounts.
 * Each account has an `ftp_username` and `ftp_password` for use in the [Data Sources manager](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/manage).
 
 ### Request Parameters
