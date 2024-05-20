@@ -30,7 +30,7 @@ Use Data Sources Jobs endpoints to upload and view data to a Data Sources accoun
 
 Adobe may add optional request and response members (name/value pairs) to existing API objects at any time and without notice or changes in versioning. Adobe recommends that you refer to the API documentation of any third-party tool you integrate with our APIs so that such additions are ignored in processing if not understood. If implemented properly, such additions are non-breaking changes for your implementation. Adobe will not remove parameters or add required parameters without first providing standard notification through release notes.
 
-## GET retrieve all accounts
+## GET all accounts
 
 Use this endpoint to retrieve all Data Sources accounts for a given report suite ID. For more information regarding Data Sources accounts, see the [Getting started with data sources](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/getting-started) guide.
 
