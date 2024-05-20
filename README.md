@@ -344,7 +344,7 @@ The following table describes the DELETE Data Sources account response parameter
 
 ## PUT data
 
-Use this endpoint to upload a data file to a Data Sources account. For more information on data uploads, see the [Upload data sources file to Adobe](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/file-upload) guide.
+Use this endpoint to upload a data file to an existing Data Sources account. For more information on data uploads, see the [Upload data sources file to Adobe](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/file-upload) guide.
 
 `PUT https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/datasources/job/{REPORT_SUITE_ID}/{DATA_SOURCE_ID}`
 
