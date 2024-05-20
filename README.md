@@ -123,7 +123,7 @@ The GET all accounts endpoint includes the following request parameter:
 
 ### Response Parameters
 
-The following table describes the retrieve Data Sources accounts response parameters:
+The following table describes the GET all accounts response parameters:
 
 | Name | Type | Description |
 | --- | --- | --- |
