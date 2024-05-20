@@ -529,7 +529,7 @@ Click the **Request** tab in the following example to see a cURL request for thi
 
 ```sh
 curl -X 'GET' \
-  "https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/job/examplersid/621/33376779" \
+  "https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/job/examplersid/15/33376779" \
   -H "accept: application/json" \
   -H "x-api-key: {CLIENT_ID}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" 
