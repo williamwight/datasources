@@ -485,7 +485,7 @@ The example above returns the following:
 
 ### Request Parameters
 
-The following table describes the retrieve all jobs request parameters:
+The following table describes the GET all jobs request parameters:
 
 | Name | Required | Type | Description |
 | --- | --- | --- | --- |
@@ -498,7 +498,7 @@ The following table describes the retrieve all jobs request parameters:
 
 ### Response Parameters
 
-The following table describes the retrieve all jobs response parameters:
+The following table describes the GET all jobs response parameters:
 
 | Name | Type | Description |
 | --- | --- | --- |
@@ -562,7 +562,7 @@ The example above returns the following:
 
 ### Request Parameters
 
-The following table describes the retrieve a single job request parameters:
+The following table describes the GET a single job request parameters:
 
 | Name | Required | Type | Description |
 | --- | --- | --- | --- |
@@ -572,7 +572,7 @@ The following table describes the retrieve a single job request parameters:
 
 ### Response Parameters
 
-The following table describes the retrieve a single job response parameters:
+The following table describes the GET a single job response parameters:
 
 | Name | Type | Description |
 | --- | --- | --- |
