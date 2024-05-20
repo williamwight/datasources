@@ -182,7 +182,7 @@ The example above returns the account `621` with the following details:
 
 * The account is named `Example Location 2`.
 * The `data_source_id` is `621`.
-* The FTP account information associated with the Data Sources account, for more information see the [Data Sources manager](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/manage).
+* The FTP account information associated with this Data Sources account. For more information see the [Data Sources manager](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/manage).
 
 ### Request Parameters
 
