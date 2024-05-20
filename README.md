@@ -186,7 +186,7 @@ The example above returns the account `621` with the following details:
 
 ### Request Parameters
 
-The following table describes the retrieve a single Data Sources account request parameters:
+The following table describes the GET a single Data Sources account request parameters:
 
 | Name | Required | Type | Description |
 | --- | --- | --- | --- |
@@ -195,7 +195,7 @@ The following table describes the retrieve a single Data Sources account request
 
 ### Response Parameters
 
-The following table describes the retrieve a single Data Sources account response parameters:
+The following table describes the GET a single Data Sources account response parameters:
 
 | Name | Type | Description |
 | --- | --- | --- |
