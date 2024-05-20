@@ -503,14 +503,14 @@ The following table describes the GET all jobs response parameters:
 | Name | Type | Description |
 | --- | --- | --- |
 | `page` | integer | Which page of the results was retrieved. Page `1` is the first page. |
-| `jobs` | container | The jobs retrieved in the search. Contains the `filename`, `rows`, `job_id`, `status`, `uploaded_date`, `started_processing_date`, and `finished_processing_date` parameters. |
+| `jobs` | container | The job information retrieved in the search. Contains the `filename`, `rows`, `job_id`, `status`, `uploaded_date`, `started_processing_date`, and `finished_processing_date` parameters. |
 | `filename` | string | The filename of the file ingested by the Data Sources job |
 | `rows` | integer | The number of rows successfully processed by the Data Sources job |
 | `job_id` | integer | The data source job ID |
 | `status` | string | The status of the data source job |
-| `uploaded_date` | string | The date the data source job was created |
-| `started_processing_date` | string | The date the data source job began processing |
-| `finished_processing_date` | string | The date the data source job finished processing |
+| `uploaded_date` | string | The date the data source job is created |
+| `started_processing_date` | string | The date the data source job begins processing |
+| `finished_processing_date` | string | The date the data source job finishes processing |
 | `total_pages` | integer | The total number of pages returned by the search |
 
 ## GET a single job
