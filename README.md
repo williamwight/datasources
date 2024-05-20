@@ -119,7 +119,7 @@ The GET all accounts endpoint includes the following request parameter:
 
 | Name | Required | Type | Description |
 | --- | --- | --- | --- |
-| `report_suite_id` | required | string | The report suite ID to retrieve Data Sources accounts for |
+| `rsid` | required | string | The report suite ID to retrieve Data Sources accounts for |
 
 ### Response Parameters
 
