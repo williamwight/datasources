@@ -235,12 +235,12 @@ curl -X 'POST' \
 {
   "name": "Test_Account",
   "email": "john@example.com",
-  "data_source_id": 621,
+  "data_source_id": 741,
   "type": "generic",
-  "date_created": "YYYY-05-10",
+  "date_created": "YYYY-08-08",
   "ftp_hostname": "ftp4.omniture.com",
-  "ftp_username": "examplersid_140872873",
-  "ftp_password": "QapgaEVd"
+  "ftp_username": "examplersid_4217476",
+  "ftp_password": "example_password"
 }
 ```
 
@@ -258,7 +258,7 @@ The example above responds with the following details:
 
 * The account `name` is `Test_Account`.
 * The `email` where notifications are sent is `john@example.com`.
-* The `data_source_id` is `621`.
+* The `data_source_id` is `741`.
 * The account has an `ftp_username` and `ftp_password` for use in the [Data Sources manager](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/manage).
 
 ### Request Parameters
@@ -302,7 +302,7 @@ Click the **Request** tab in the following example to see a cURL request for thi
 
 ```sh
 curl -X 'DELETE' \
-  "https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/data_sources/account/examplersid/621" \
+  "https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/data_sources/account/examplersid/741" \
   -H "accept: application/json" \
   -H "x-api-key: {CLIENT_ID}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" 
@@ -319,7 +319,7 @@ curl -X 'DELETE' \
 
 #### Request example details
 
-The example above requests to `DELETE` the Data Sources account with the `621` ID.
+The example above requests to `DELETE` the Data Sources account with the `741` ID.
 
 #### Response example details
 
