@@ -434,7 +434,7 @@ Click the **Request** tab in the following example to see a cURL request for thi
 
 ```sh
 curl -X 'GET' \
-  "https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/job/examplersid/621?status=success" \
+  "https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/job/examplersid/15?status=success" \
   -H "accept: application/json" \
   -H "x-api-key: {CLIENT_ID}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" 
@@ -447,7 +447,7 @@ curl -X 'GET' \
   "page": 1,
   "jobs": [
     {
-      "filename": "uploaddata_for_october.tab",
+      "filename": "example_1_for_upload.tab",
       "rows": 3,
       "job_id": 33376779,
       "status": "success",
@@ -456,7 +456,7 @@ curl -X 'GET' \
       "finished_processing_date": "YYYY-10-25 13:23:03"
     },
     {
-      "filename": "uploaddata_for_november.tab",
+      "filename": "example_1_for_upload.tab",
       "rows": 3,
       "job_id": 33376787,
       "status": "success",
@@ -473,7 +473,7 @@ curl -X 'GET' \
 
 The example above requests the following:
 
-* The jobs belonging to the account `621`.
+* The jobs belonging to the account `15`.
 * The only jobs to be returned must have the `success` status.
 
 #### Response example details
