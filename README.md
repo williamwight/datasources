@@ -344,7 +344,7 @@ The following table describes the DELETE Data Sources account response parameter
 
 ## PUT upload data
 
-Use this endpoint to upload a data file to a Data Sources account. For more information on data uploads, please see the [Upload data sources file to Adobe](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/file-upload) guide.
+Use this endpoint to upload a data file to a Data Sources account. For more information on data uploads, see the [Upload data sources file to Adobe](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/file-upload) guide.
 
 `PUT https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/datasources/job/{REPORT_SUITE_ID}/{DATA_SOURCE_ID}`
 
@@ -402,7 +402,7 @@ The following table describes the upload data request parameters:
 | --- | --- | --- | --- |
 | `rsid` | required | string | The report suite ID associated with the Data Sources account |
 | `data_source_id` | required | string | The Data Source ID of the account to receive the file |
-| `file` | required | string | The file path of the file to be uploaded. An `@` symbol must precede the location to ensure the request is properly sent. Certain API clients such as Postman have features that will automatically format your call to include the file upload details. In these cases please refer to their respective documentation for an accurate API call. |
+| `file` | required | string | The file path of the file to be uploaded. An `@` symbol must precede the location to ensure the request is properly sent. Certain API clients such as Postman have features that will automatically format your call to include the file upload details. In these cases refer to their respective documentation for an accurate API call. |
 
 ### Response Parameters
 
