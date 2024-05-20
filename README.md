@@ -32,7 +32,7 @@ Adobe may add optional request and response members (name/value pairs) to existi
 
 ## GET all accounts
 
-Use this endpoint to retrieve all Data Sources accounts for a given report suite ID. For more information regarding Data Sources accounts, see the [Getting started with data sources](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/getting-started) guide.
+Use this endpoint to list all Data Sources accounts for a given report suite ID. For more information regarding Data Sources accounts, see the [Getting started with data sources](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/getting-started) guide.
 
 `GET https://analytics.adobe.io/api/{GLOBAL_COMPANY_ID}/datasources/account/{REPORT_SUITE_ID}`
 
@@ -57,44 +57,44 @@ curl -X 'GET' \
 ```json
 [
   {
-    "name": "Salt Lake Location",
+    "name": "Example Location 1",
     "email": "john@example.com",
     "data_source_id": 2,
     "type": "generic",
     "date_created": "YYYY-03-19",
     "ftp_hostname": "ftp4.omniture.com",
     "ftp_username": "examplersid_4685934",
-    "ftp_password": "7rC1AW4b"
+    "ftp_password": "example_password"
   },
   {
-    "name": "Sandy Location",
+    "name": "Example Location 2",
     "email": "john@example.com",
     "data_source_id": 308,
     "type": "generic",
     "date_created": "YYYY-08-08",
     "ftp_hostname": "ftp4.omniture.com",
     "ftp_username": "examplersid_4217476",
-    "ftp_password": "jfCT2xDO"
+    "ftp_password": "example_password"
   },
   {
-    "name": "Lehi Location",
+    "name": "Example Location 3",
     "email": "john@example.com",
     "data_source_id": 404,
     "type": "generic",
     "date_created": "YYYY-04-16",
     "ftp_hostname": "ftp4.omniture.com",
     "ftp_username": "examplersid_01883528",
-    "ftp_password": "pWt73JDJ"
+    "ftp_password": "example_password"
   },
   {
-    "name": "Ogden Location",
+    "name": "Example Location 4",
     "email": "john@example.com",
     "data_source_id": 405,
     "type": "generic",
     "date_created": "YYYY-04-23",
     "ftp_hostname": "ftp4.omniture.com",
     "ftp_username": "examplersid_211487109",
-    "ftp_password": "ybg6Gla9"
+    "ftp_password": "example_password"
   }
 ]
 ```
