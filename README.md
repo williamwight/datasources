@@ -246,7 +246,7 @@ curl -X 'POST' \
 
 #### Request example details
 
-The account details are specified as query parameters, including the required `rsid`. The example above requests to create an account with the following details:
+The account details are specified as query parameters, including the required `rsid`. The example above creates an account with the following details:
 
 * The account `type` is `generic`. For more information see [Data Sources manager](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/manage).
 * The account `name` is `Test_Account`.
@@ -256,10 +256,9 @@ The account details are specified as query parameters, including the required `r
 
 The example above responds with the following details:
 
-* The account `name` is `Test_Account`.
-* The `email` where notifications are sent is `john@example.com`.
+* The account `name` is confirmed as `Test_Account`.
 * The `data_source_id` is `741`.
-* The account has an `ftp_username` and `ftp_password` for use in the [Data Sources manager](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/manage).
+* An FTP account was created with the Data Sources account. The FTP account details include an `ftp_hostname`, an `ftp_username`, and an `ftp_password`. For more information see the [Data Sources manager](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/manage).
 
 ### Request Parameters
 
