@@ -383,7 +383,7 @@ curl  -X PUT \
 
 The example above requests the following:
 
-* The upload is sent to the Data Sources account with the ID `621`.
+* To upload the file `example_upload.txt` to the Data Sources account with the ID `621`.
 * The file to be uploaded is specified in the `--F` section of the request. A `file=` precedes the file path, which is specified by an `@` and contained within quotation marks. For more information on what files can be uploaded to Adobe, see the [File Format](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/file-format) guide.
 
 #### Response example details
