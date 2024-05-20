@@ -567,8 +567,8 @@ The following table describes the GET a single job request parameters:
 | Name | Required | Type | Description |
 | --- | --- | --- | --- |
 | `rsid` | required | string | The report suite ID associated with the Data Sources account |
-| `data_source_id` | required | string | The data source ID associated with the job |
-| `job_id` | required | string | The job ID of the job to retrieve |
+| `data_source_id` | required | string | The Data Sources account ID |
+| `job_id` | required | string | The data source job ID |
 
 ### Response Parameters
 
