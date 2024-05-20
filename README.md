@@ -111,7 +111,7 @@ The example above lists four Data Sources accounts with the following details:
 * A `data_source_id` is provided for working with specific accounts.
 * An email contact for the account.
 * A date for the account creation.
-* Each account has an `ftp_username` and `ftp_password` for use in the [Data Sources manager](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/manage). By default FTP accounts are created with each Data Sources account.
+* Each account has an `ftp_username` and `ftp_password` for use in the [Data Sources manager](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/manage). By default, FTP accounts are created with each Data Sources account.
 
 ### Request Parameters
 
