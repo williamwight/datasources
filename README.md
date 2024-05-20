@@ -254,7 +254,7 @@ The account details are specified as query parameters, including the required `r
 
 #### Response example details
 
-The example above responds with the following details:
+The successful example above responds with the following details:
 
 * The account `name` is confirmed as `Test_Account`.
 * The `data_source_id` is `741`.
